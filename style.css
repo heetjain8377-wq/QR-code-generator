@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg,#1D546D,#061E29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    height: 60vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+input{
+    width: 70%;
+    height: 7vh;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    box-shadow: 4px 4px 10px black;
+    position: absolute;
+    top: 5vh;
+    font-size: 1rem;
+    padding: 0 0 0 2rem;
+}
+
+button{
+    background: linear-gradient(270deg,#1D546D,#F3F4F4);
+    width: 15vw;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 5vh;
+    box-shadow: 4px 4px 7px black;
+    transition: 0.5s;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#qrimage{
+    width: 200px;
+    height: auto;
+    display: none;
+    margin: 0 auto;
+    box-shadow: 10px 10px 6px black;
+    position: absolute;
+    z-index: 2;
+}
+
+#loader{
+    font-size: 2rem;
+    color: white;
+    display: none;
+    text-shadow: 4px 4px 4px black;
+    position: fixed;
+    position: absolute;
+    z-index: 1;
+}
+
+#welcome{
+    font-size: 2rem;
+    color: white;
+    text-shadow: 5px 5px 4px black;
+}
+
+@media(max-width:1160px){
+    button{
+        width: fit-content;
+    }
+}
+
+@media(max-width:550px){
+    #qrimage{
+        width: 70%;
+        height: auto;
+    }
+
+    #welcome{
+        font-size: 18px;
+    }
+
+    .container{
+        width: 90%;
+        height: 90vh;
+    }
+
+    input{
+        position: absolute;
+        top: 8vh;
+    }
+
+    button{
+        font-size: 18px;
+        position: absolute;
+        bottom: 8vh;
+    }
+}
+
+@media(min-width:400px) and (max-width:950px){
+    #welcome{
+        font-size: 1rem;
+    }
+}
